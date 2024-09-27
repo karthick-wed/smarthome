@@ -1,0 +1,267 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+img
+{
+    width: 1250px;
+    height: 750px;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+}
+.image
+{
+    display: inline-block;
+}
+.narbar
+{
+    width: 100%;
+    height: 50px;
+    transition: 0.3s;
+    background:linear-gradient(180deg,white,rgba(225,173,129,0.87));
+}
+.narbar h1
+{
+    position: absolute;
+    left: 40px;
+    top: 5px;
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+}
+.label1
+{
+    width: 100px;
+    height: 40px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.212),inset 0px -5px 15px rgba(225,225,225,0.4);
+    cursor: pointer;
+    transition: 0.3s;
+    left: 6px;
+}
+.label1::after
+{
+    content: "";
+    border-radius: 180px;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    position: absolute;
+    top: 2.5px;
+    left: 4px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+input
+{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+input:checked + .label1
+{
+    background-color: #242424;
+}
+input:checked + .label1::after
+{
+    transform: translateX(164%);
+    background: linear-gradient(180deg,#ffffff,#ffffff);
+}
+.sun
+{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    top: 4.5px;
+    left: 5.8px;
+    fill: #fff;
+    transition: 0.3s;
+}
+.moon
+{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    top: 4.5px;
+    left: 65px;
+    color: white;
+    fill:#7e7e7e;
+    transition: 0.3s;
+}
+input:checked + .label1 svg.sun{
+    fill: #ffeded;
+}
+input:checked +.label1 svg.moon
+{
+    fill: #fff;
+    border: #fff;
+    border: none;
+}
+.control
+{
+    position: absolute;
+    display: inline-block;
+    right: 70px;
+    top: 90px;
+}
+.img2
+{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    transition: 0.3s;
+}
+#themeh1{
+    transition: 0.3s;
+}
+.Ac{
+    width: 657px;
+    height: 300px;
+    position: absolute;
+    left: 23.5%;
+    top: 39px;
+    z-index: 1;
+    transition: 0.3s;
+}
+.ac-on
+{
+    display: none;
+    width: 550px;
+    height: 300px;
+    position: absolute;
+    left: 27%;
+    top: 39px;
+    z-index: 3;
+    transition: 0.3s;
+}
+.label2{
+    width: 100px;
+    height: 40px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.138),inset 0px -5px 15px rgba(225, 225, 225, 0);
+    cursor: pointer;
+    transition: 0.3s;
+    left: 5px;
+    top: 0px;
+}
+.label2::after{
+    content: "";
+    border-radius: 180px;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(180deg,#d4d4d4,#ffffff);
+    position: absolute;
+    top: 2.5px;
+    left: 4px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;   
+}
+input:checked + .label2::after
+{
+    transform: translateX(164%);
+    background: linear-gradient(180deg,#000000,#000000);
+}
+input:checked + .label2{
+    background: #00f731;
+}
+.ac-off
+{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    z-index: 1;
+    top: 30px;
+    left: 65px;
+    transition: 0.3s;   
+}
+.control2 h1
+{
+    position: relative;
+    top: 19.5px;
+    transition: 0.3s;
+    left: 10px;
+    right: 10px;
+}
+#themeh1
+{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.ac-off2
+{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    z-index: 1;
+    top: 30px;
+    left: 65px;
+    transition: 0.3s; 
+    display: none;
+}
+.temp
+{
+    position: relative;
+    height: 30px;
+    width: 240px;
+    left: 350px;
+    top: 7px;
+    background: linear-gradient(180deg,white,rgba(255, 129, 129, 0.87));
+    padding: 1px;
+    backdrop-filter: blur(30px);
+    border: solid;
+    border-radius: 10px;
+    border-color: rgb(255, 241, 241);
+}
+.temp h3
+{
+   position: relative;
+   left: 8.5px;
+   top: 3px;
+   transition: 0.5s;
+}
+.acnigth
+{
+    width: 657px;
+    height: 300px;
+    position: absolute;
+    left: 23.5%;
+    top: 39px;
+    z-index: 3;
+    transition: 0.3s;
+    display: none;
+}
+.control1
+{
+    background-color: #e2e2e2ee;
+    width: 110px;
+    height: 97px;
+    position: relative;
+    padding: 6px;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px 9px rgba(128, 128, 128, 0.863);
+}
+.control2
+{
+    background-color: #ffebfaee;
+    width: 110px;
+    height: 97px;
+    position: relative;
+    padding: 6px;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    top: 30px;
+}
