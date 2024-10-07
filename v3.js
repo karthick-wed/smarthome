@@ -41,7 +41,7 @@ acbtn.addEventListener("change",function(event){
     {
         aconimg.style.display="block"
         acoff.style.display="none"
-        temp.textContent="Home temperature 20'C"
+        temp.textContent="Home temperature 22'C"
         summerpng.style.display="none"
         icepng.style.display="inline"
     }
