@@ -1,0 +1,704 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body
+{
+    background-color: #161616;
+}
+img
+{
+    width: 1250px;
+    height: 750px;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.image
+{
+    display: inline-block;
+    overflow: hidden;
+}
+.narbar
+{
+    width: 99.9%;
+    height: 50px;
+    transition: 0.3s;
+    background-color: #161616;
+    border: solid;
+    border-color: whitesmoke;
+    overflow: hidden;
+    position: absolute;
+    z-index: 4;
+    border-left: 2px;
+    border-right: 2px;
+}
+.narbar h1
+{
+    position: absolute;
+    left: 50px;
+    top: 5px;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+.label1
+{
+    width: 100px;
+    height: 40px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.212),inset 0px -5px 15px rgba(225, 225, 225, 0.434);
+    cursor: pointer;
+    transition: 0.3s;
+    left: 4px;
+    border: solid;
+    border-color: white;
+    bottom: 5px;
+}
+.label1::after
+{
+    content: "";
+    border-radius: 180px;
+    width: 31px;
+    height: 31px;
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+input
+{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+input:checked + .label1
+{
+    background-color: #242424;
+}
+input:checked + .label1::after
+{
+    transform: translateX(192%);
+    background: linear-gradient(180deg,#ffffff,#ffffff);
+}
+.sun
+{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    top: 4.5px;
+    left: 5.8px;
+    fill: #fff;
+    transition: 0.3s;
+}
+.moon
+{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    top: 6px;
+    left: 65px;
+    color: white;
+    fill:#7e7e7e;
+    transition: 0.3s;
+}
+input:checked + .label1 svg.sun{
+    fill: #ffeded;
+}
+input:checked +.label1 svg.moon
+{
+    fill: #fff;
+    border: #fff;
+    border: none;
+}
+.control
+{
+    position: absolute;
+    display: inline-block;
+    right: 70px;
+    top: 90px;
+}
+.img2
+{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    transition: 0.3s;
+    overflow: hidden;
+    border: solid;
+    border-radius: 19px;
+    border-color: whitesmoke;
+}
+#themeh1{
+    transition: 0.3s;
+}
+.Ac{
+    width: 656px;
+    height: 300px;
+    position: absolute;
+    left: 23.5%;
+    top: 39px;
+    z-index: 1;
+    transition: 0.3s;
+    display: inline-block;
+    overflow: hidden;
+}
+.ac-on
+{
+    display: none;
+    width: 550px;
+    height: 300px;
+    position: absolute;
+    left: 27%;
+    top: 39px;
+    z-index: 5;
+    transition: 0.3s;
+    overflow: hidden;
+}
+.label2{
+    width: 100px;
+    height: 40px;
+    position: relative;
+    display: block;
+    background: #333;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.138),inset 0px -5px 15px rgba(225, 225, 225, 0);
+    cursor: pointer;
+    transition: 0.3s;
+    left: 5px;
+    top: 15px;
+    border: solid;
+    border-color: white;
+    overflow: hidden;
+}
+.label2::after{
+    content: "";
+    border-radius: 180px;
+    width: 31px;
+    height: 31px;
+    background: linear-gradient(180deg,#d4d4d4,#ffffff);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;   
+}
+input:checked + .label2::after
+{
+    transform: translateX(192%);
+    background: linear-gradient(180deg,#000000,#000000);
+}
+input:checked + .label2{
+    background: hsl(223, 90%, 61%);
+}
+.ac-off
+{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    z-index: 1;
+    top: 30px;
+    left: 65px;
+    transition: 0.3s;   
+    display: none;
+    overflow: hidden;
+}
+.control2 h1
+{
+    position: relative;
+    top: 10px;
+    transition: 0.3s;
+    left: 10px;
+    right: 10px;
+    display: inline;
+    overflow: hidden;
+}
+#themeh1
+{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    overflow: hidden;
+}
+.ac-off2
+{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    z-index: 1;
+    top: 20px;
+    left: 65px;
+    transition: 0.3s; 
+    overflow: hidden;
+    display: inline-block;
+}
+.temp
+{
+    position: relative;
+    height: 30px;
+    width: 270px;
+    left: 350px;
+    top: 7px;
+    background-color: #161616;
+    padding: 1px;
+    border: solid;
+    border-radius: 15px;
+    border-color: whitesmoke;
+    transition: 0.3s;
+    border-width: 2px;
+    transition: 0.3s;
+    color: whitesmoke;
+}
+.temp h3
+{
+   position: relative;
+   left: 8.5px;
+   top: 3px;
+   transition: 0.4s;
+   overflow: hidden;
+   cursor: pointer;
+}
+.acnigth
+{
+    width: 657px;
+    height: 300px;
+    position: absolute;
+    left: 23.5%;
+    top: 39px;
+    z-index: 3;
+    transition: 0.3s;
+    display: none;
+    overflow: hidden;
+}
+.control1
+{
+    background-color:  #333;
+    width: 110px;
+    height: 97px;
+    position: relative;
+    padding: 6px;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba(128, 128, 128, 0.863);
+    color: white;
+    overflow: visible;
+}
+.control2
+{
+    background-color:  #333;
+    width: 110px;
+    height: 97px;
+    position: relative;
+    padding: 6px;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    top: 30px;
+    box-shadow: 1px 1px 8px rgba(128, 128, 128, 0.863);
+    color: white;
+}
+.narbar p{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    overflow: hidden;
+}
+.ddt
+{
+    display: flex;
+    position: relative;
+    left: 47%;
+    bottom: 25px;
+    overflow: hidden;
+    color: whitesmoke;
+    transition: 0.3s;
+}
+#Day
+{
+    margin: 0 90px;
+    overflow: hidden;
+    position: relative;
+    left: 30px;
+}
+.lightnight
+{
+    position: absolute;
+    z-index: 2;
+    top: 19px;
+    display: none;
+    transition: 0.4s;
+    overflow: hidden;
+}
+.lightday
+{
+    position: absolute;
+    top: 19px;
+    z-index: 2;
+    display: inline-block;
+    transition: 0.4s;
+    overflow: hidden;
+}
+.lightglow
+{
+    position: absolute;
+    top: 19px;
+    z-index: 4;
+    display: none;
+    transition: 0.4s;
+    overflow: hidden;
+}
+.control3{
+    background-color:  #333;
+    width: 110px;
+    height: 97px;
+    position: relative;
+    padding: 6px;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    top: 30px;
+    margin-top: 35px;
+    box-shadow: 1px 1px 8px rgba(128, 128, 128, 0.863);
+    color: white;
+}
+.control3 label
+{
+    position: relative;
+    top: 0px;
+    bottom: 20px;
+    overflow: hidden;
+}
+.control3 h1{
+    position: relative;
+    left: 18px;
+    overflow: hidden;
+}
+.narbar h2
+{
+    position: absolute;
+    right: 17%;
+    top: 0px;
+    color: white;
+    overflow: hidden;
+}
+.con
+{
+    background-color: #000000;
+    width: 130px;
+    height: 30px;
+    position: absolute;
+    right: 4.1%;
+    top: 8px;
+    border: solid;
+    border-radius: 22px;
+    border-color: white;
+    box-shadow: 1px 1px 8px;
+    cursor: pointer;
+    overflow: hidden;
+    border-width: 2px;
+    transition: 0.5s;
+}
+.control4
+{
+    background-color: #333;
+    width: 110px;
+    height: 97px;
+    position: relative;
+    padding: 6px;
+    border: none;
+    border-radius: 10px;
+    top: 40px;
+    margin-top: 35px;
+    box-shadow: 1px 1px 8px rgba(128, 128, 128, 0.863);
+    color: white;
+    transition: 0.5s;
+}
+.control4 h5{
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+}
+.control3 h1
+{
+    display: inline;
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    font-size: 28px;
+    left: 12px;
+}
+.control3 label
+{
+    position: absolute;
+    top: 55px;
+    left: 10px;
+}
+.control1::after
+{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+.control1::before
+{
+    content: "";
+    background: linear-gradient(45deg,#FF0000,#FF7300,#FFFB00,#48FF00,#00FFD5,#002BFF,#FF00CB,#FF0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(10px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+@keyframes glowing{
+    0%{background-position: 0.0;}
+    50%{background-position: 400% 0;}
+    100%{background-position: 0 0;}
+}
+.control1:hover::before
+{
+    opacity: 1;
+    box-shadow: none;
+}
+.control2::after
+{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+.control2::before
+{
+    content: "";
+    background: linear-gradient(45deg,#FF0000,#FF7300,#FFFB00,#48FF00,#00FFD5,#002BFF,#FF00CB,#FF0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(10px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+.control2:hover::before
+{
+    opacity: 1;
+    box-shadow: none;
+}
+.control3::after
+{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+.control3::before
+{
+    content: "";
+    background: linear-gradient(45deg,#FF0000,#FF7300,#FFFB00,#48FF00,#00FFD5,#002BFF,#FF00CB,#FF0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(10px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+.control3:hover::before
+{
+    opacity: 1;
+    box-shadow: none;
+}
+.temp::after
+{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+.temp::before
+{
+    content: "";
+    background: linear-gradient(15deg,#FF0000,#59caff,#e54747,#1767f0,#db2727,#0c81c4,#ff5050,#354ebd);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: 3.8;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(7px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 15px;
+    opacity: 0;
+}
+.temp:hover::before
+{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.con:hover
+{
+    opacity: 1;
+    box-shadow: 1px 1px 9px whitesmoke;
+}
+.lightongif
+{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    z-index: 1;
+    left: 85px;
+    top: 14px;
+    display: none;
+    transition: 0.4s;
+    margin-top: 0;
+    margin-left: 0;
+}
+.ligthoffgif
+{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    z-index: 1;
+    left: 85px;
+    top: 14px;
+    display: inline;
+    transition: 0.4s;
+    margin-top: 0;
+    margin-left: 0;
+}
+.homemorg
+{
+    border: solid;
+    border-radius: 19px;
+    border-color: whitesmoke;
+}
+.homepng
+{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    display: inline;
+    top: 0px;
+    z-index: 4.5;
+    margin-top: 4.5px;
+    margin-left: 12px;
+}
+.summerpng
+{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: inline;
+    z-index: 4.5;
+    top: 0;
+    margin-top: 0;
+    left: 220px;
+    transition: 0.5s;
+}
+.icepng
+{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: none;
+    z-index: 4.5;
+    top: 0;
+    margin-top: 0;
+    left: 220px;
+    transition: 0.5s;
+}
+#time
+{
+    color: rgb(5, 102, 10);
+    position: relative;
+    left: 50px;
+}
+.control4::after
+{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+.control4::before
+{
+    content: "";
+    background: linear-gradient(45deg,#FF0000,#FF7300,#FFFB00,#48FF00,#00FFD5,#002BFF,#FF00CB,#aa00ff);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(10px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+.control4:hover::before
+{
+    opacity: 1;
+    box-shadow: none;
+    cursor: pointer;
+}
